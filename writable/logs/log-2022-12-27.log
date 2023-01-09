@@ -1,0 +1,319 @@
+CRITICAL - 2022-12-27 11:26:12 --> Invalid file: login.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('login.php')
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('login', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('login')
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 11:32:28 --> mysqli_sql_exception: Table 'groups' already exists in C:\xampp\htdocs\yuknikah\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\yuknikah\system\Database\MySQLi\Connection.php(292): mysqli->query('CREATE TABLE `g...', 0)
+#1 C:\xampp\htdocs\yuknikah\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `g...')
+#2 C:\xampp\htdocs\yuknikah\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `g...')
+#3 C:\xampp\htdocs\yuknikah\system\Database\Forge.php(509): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `g...')
+#4 C:\xampp\htdocs\yuknikah\app\Database\Migrations\2022-12-24-133906_CreateGroup.php(40): CodeIgniter\Database\Forge->createTable('groups')
+#5 C:\xampp\htdocs\yuknikah\system\Database\MigrationRunner.php(868): App\Database\Migrations\CreateGroup->up()
+#6 C:\xampp\htdocs\yuknikah\system\Database\MigrationRunner.php(187): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\yuknikah\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\yuknikah\system\CLI\Commands.php(63): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\yuknikah\system\CLI\CommandRunner.php(65): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\yuknikah\system\CLI\CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index(Array)
+#11 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(920): CodeIgniter\CLI\CommandRunner->_remap('index', Array)
+#12 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+#13 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(347): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\yuknikah\system\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\yuknikah\spark(98): CodeIgniter\CLI\Console->run()
+#16 {main}
+ERROR - 2022-12-27 11:58:46 --> mysqli_sql_exception: Unknown column 'updated_at' in 'field list' in C:\xampp\htdocs\yuknikah\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\yuknikah\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `gr...', 0)
+#1 C:\xampp\htdocs\yuknikah\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `gr...')
+#2 C:\xampp\htdocs\yuknikah\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `gr...')
+#3 C:\xampp\htdocs\yuknikah\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `gr...', Array, false)
+#4 C:\xampp\htdocs\yuknikah\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\yuknikah\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\yuknikah\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\yuknikah\app\Controllers\Groups.php(63): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(927): App\Controllers\Groups->create()
+#9 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+#10 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\yuknikah\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\yuknikah\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-12-27 11:58:46 --> Unknown column 'updated_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `groups` (`name_group`, `info_group`, `created_at`, `updated_at`) VALUES (\'teman sd\', \'\', \'2022-12-27 11:58:46\', \'2022-12-27 11:58:46\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `groups` (`name_group`, `info_group`, `created_at`, `updated_at`) VALUES (\'teman sd\', \'\', \'2022-12-27 11:58:46\', \'2022-12-27 11:58:46\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `groups` (`name_group`, `info_group`, `created_at`, `updated_at`) VALUES (\'teman sd\', \'\', \'2022-12-27 11:58:46\', \'2022-12-27 11:58:46\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `groups` (`name_group`, `info_group`, `created_at`, `updated_at`) VALUES (:name_group:, :info_group:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Groups.php(63): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Groups->create()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Groups))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 15:20:45 --> Attempt to read property "name_user" on null
+in APPPATH\Views\layout\default.php on line 204.
+ 1 APPPATH\Views\layout\default.php(204): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name_user" on null', 'APPPATH\\Views\\layout\\default.php', 204)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\default.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/default', [], true)
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('home', [], true)
+ 6 APPPATH\Controllers\Home.php(9): view('home')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 15:20:46 --> Attempt to read property "name_user" on null
+in APPPATH\Views\layout\default.php on line 204.
+ 1 APPPATH\Views\layout\default.php(204): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name_user" on null', 'APPPATH\\Views\\layout\\default.php', 204)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\default.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('layout/default', [], true)
+ 5 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('home', [], true)
+ 6 APPPATH\Controllers\Home.php(9): view('home')
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Home->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 17:40:50 --> mysqli_sql_exception: Table 'yuknikah.contact' doesn't exist in C:\xampp\htdocs\yuknikah\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\yuknikah\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\yuknikah\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\yuknikah\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\yuknikah\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\yuknikah\app\Models\M_contact.php(20): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\yuknikah\app\Controllers\Kontak.php(27): App\Models\M_contact->getAll()
+#6 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(927): App\Controllers\Kontak->index()
+#7 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#8 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\yuknikah\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\yuknikah\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-27 17:40:50 --> Table 'yuknikah.contact' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `contact`
+JOIN `groups` ON `groups`.`id_group` = `contact`.`id_group`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `contact`
+JOIN `groups` ON `groups`.`id_group` = `contact`.`id_group`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `contact`
+JOIN `groups` ON `groups`.`id_group` = `contact`.`id_group`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `contact`
+JOIN `groups` ON `groups`.`id_group` = `contact`.`id_group`', [], false)
+ 5 APPPATH\Models\M_contact.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Kontak.php(27): App\Models\M_contact->getAll()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Kontak->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 17:42:44 --> mysqli_sql_exception: Unknown column 'contact.id_group' in 'on clause' in C:\xampp\htdocs\yuknikah\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\yuknikah\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *\nFROM `...', 0)
+#1 C:\xampp\htdocs\yuknikah\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 C:\xampp\htdocs\yuknikah\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 C:\xampp\htdocs\yuknikah\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\yuknikah\app\Models\M_contact.php(20): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\yuknikah\app\Controllers\Kontak.php(27): App\Models\M_contact->getAll()
+#6 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(927): App\Controllers\Kontak->index()
+#7 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#8 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\yuknikah\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\yuknikah\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2022-12-27 17:42:44 --> Unknown column 'contact.id_group' in 'on clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `contacts`
+JOIN `groups` ON `groups`.`id_group` = `contact`.`id_group`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `contacts`
+JOIN `groups` ON `groups`.`id_group` = `contact`.`id_group`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `contacts`
+JOIN `groups` ON `groups`.`id_group` = `contact`.`id_group`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `contacts`
+JOIN `groups` ON `groups`.`id_group` = `contact`.`id_group`', [], false)
+ 5 APPPATH\Models\M_contact.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 6 APPPATH\Controllers\Kontak.php(27): App\Models\M_contact->getAll()
+ 7 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Kontak->index()
+ 8 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 17:47:53 --> Cannot use object of type stdClass as array
+in APPPATH\Views\kontak\index.php on line 68.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kontak/index', [], true)
+ 4 APPPATH\Controllers\Kontak.php(28): view('kontak/index', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Kontak->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 17:53:16 --> Undefined variable $group
+in APPPATH\Views\kontak\index.php on line 76.
+ 1 APPPATH\Views\kontak\index.php(76): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $group', 'APPPATH\\Views\\kontak\\index.php', 76)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\kontak\\index.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('kontak/index', [], true)
+ 5 APPPATH\Controllers\Kontak.php(28): view('kontak/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Kontak->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 19:04:20 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::leftjoin()
+in APPPATH\Models\M_contact.php on line 19.
+ 1 APPPATH\Controllers\Kontak.php(27): App\Models\M_contact->getAll()
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Kontak->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-27 19:35:54 --> Call to undefined method App\Models\M_contact::isnert
+in SYSTEMPATH\Model.php on line 774.
+ 1 APPPATH\Controllers\Kontak.php(62): CodeIgniter\Model->__call('isnert', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Kontak->create()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 19:36:24 --> mysqli_sql_exception: Table 'yuknikah.contacs' doesn't exist in C:\xampp\htdocs\yuknikah\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\yuknikah\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\yuknikah\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\yuknikah\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\yuknikah\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\yuknikah\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\yuknikah\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\yuknikah\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\yuknikah\app\Controllers\Kontak.php(62): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(927): App\Controllers\Kontak->create()
+#9 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#10 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\yuknikah\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\yuknikah\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-12-27 19:36:24 --> Table 'yuknikah.contacs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `contacs` (`id_group`, `name_alias`, `phone`, `email`, `created_at`, `updated_at`) VALUES (\'1\', \'Udin sedunia\', \'089921381231\', \'udinsedunia@gmail.com\', \'2022-12-27 19:36:24\', \'2022-12-27 19:36:24\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `contacs` (`id_group`, `name_alias`, `phone`, `email`, `created_at`, `updated_at`) VALUES (\'1\', \'Udin sedunia\', \'089921381231\', \'udinsedunia@gmail.com\', \'2022-12-27 19:36:24\', \'2022-12-27 19:36:24\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `contacs` (`id_group`, `name_alias`, `phone`, `email`, `created_at`, `updated_at`) VALUES (\'1\', \'Udin sedunia\', \'089921381231\', \'udinsedunia@gmail.com\', \'2022-12-27 19:36:24\', \'2022-12-27 19:36:24\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `contacs` (`id_group`, `name_alias`, `phone`, `email`, `created_at`, `updated_at`) VALUES (:id_group:, :name_alias:, :phone:, :email:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Kontak.php(62): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Kontak->create()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 19:37:57 --> mysqli_sql_exception: Table 'yuknikah.contacs' doesn't exist in C:\xampp\htdocs\yuknikah\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\yuknikah\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\yuknikah\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\yuknikah\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\yuknikah\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\yuknikah\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\yuknikah\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\yuknikah\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\yuknikah\app\Controllers\Kontak.php(62): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(927): App\Controllers\Kontak->create()
+#9 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#10 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\yuknikah\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\yuknikah\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-12-27 19:37:57 --> Table 'yuknikah.contacs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `contacs` (`id_group`, `name_alias`, `phone`, `email`, `created_at`, `updated_at`) VALUES (\'1\', \'Udin sedunia\', \'089921381231\', \'udinsedunia@gmail.com\', \'2022-12-27 19:37:57\', \'2022-12-27 19:37:57\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `contacs` (`id_group`, `name_alias`, `phone`, `email`, `created_at`, `updated_at`) VALUES (\'1\', \'Udin sedunia\', \'089921381231\', \'udinsedunia@gmail.com\', \'2022-12-27 19:37:57\', \'2022-12-27 19:37:57\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `contacs` (`id_group`, `name_alias`, `phone`, `email`, `created_at`, `updated_at`) VALUES (\'1\', \'Udin sedunia\', \'089921381231\', \'udinsedunia@gmail.com\', \'2022-12-27 19:37:57\', \'2022-12-27 19:37:57\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `contacs` (`id_group`, `name_alias`, `phone`, `email`, `created_at`, `updated_at`) VALUES (:id_group:, :name_alias:, :phone:, :email:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Kontak.php(62): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Kontak->create()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 19:38:47 --> mysqli_sql_exception: Table 'yuknikah.contacs' doesn't exist in C:\xampp\htdocs\yuknikah\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\yuknikah\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\yuknikah\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\yuknikah\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\yuknikah\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\yuknikah\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\yuknikah\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\yuknikah\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\yuknikah\app\Controllers\Kontak.php(62): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(927): App\Controllers\Kontak->create()
+#9 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#10 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\yuknikah\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\yuknikah\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-12-27 19:38:47 --> Table 'yuknikah.contacs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `contacs` (`id_group`, `name_alias`, `phone`, `email`, `created_at`, `updated_at`) VALUES (\'1\', \'udin sedunia\', \'0912309130\', \'udinsedunia@gmail.com\', \'2022-12-27 19:38:47\', \'2022-12-27 19:38:47\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `contacs` (`id_group`, `name_alias`, `phone`, `email`, `created_at`, `updated_at`) VALUES (\'1\', \'udin sedunia\', \'0912309130\', \'udinsedunia@gmail.com\', \'2022-12-27 19:38:47\', \'2022-12-27 19:38:47\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `contacs` (`id_group`, `name_alias`, `phone`, `email`, `created_at`, `updated_at`) VALUES (\'1\', \'udin sedunia\', \'0912309130\', \'udinsedunia@gmail.com\', \'2022-12-27 19:38:47\', \'2022-12-27 19:38:47\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `contacs` (`id_group`, `name_alias`, `phone`, `email`, `created_at`, `updated_at`) VALUES (:id_group:, :name_alias:, :phone:, :email:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Kontak.php(62): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Kontak->create()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
+ERROR - 2022-12-27 19:42:15 --> mysqli_sql_exception: Table 'yuknikah.contacs' doesn't exist in C:\xampp\htdocs\yuknikah\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 C:\xampp\htdocs\yuknikah\system\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `co...', 0)
+#1 C:\xampp\htdocs\yuknikah\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `co...')
+#2 C:\xampp\htdocs\yuknikah\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `co...')
+#3 C:\xampp\htdocs\yuknikah\system\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `co...', Array, false)
+#4 C:\xampp\htdocs\yuknikah\system\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\yuknikah\system\BaseModel.php(749): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\yuknikah\system\Model.php(667): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\yuknikah\app\Controllers\Kontak.php(62): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(927): App\Controllers\Kontak->create()
+#9 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+#10 C:\xampp\htdocs\yuknikah\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\yuknikah\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\yuknikah\system\Commands\Server\rewrite.php(46): require_once('C:\\xampp\\htdocs...')
+#13 {main}
+CRITICAL - 2022-12-27 19:42:15 --> Table 'yuknikah.contacs' doesn't exist
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('INSERT INTO `contacs` (`id_group`, `name_contact`, `name_alias`, `phone`, `email`, `address`, `info_contact`, `created_at`, `updated_at`) VALUES (\'1\', \'udin \', \'udin sedunia\', \'1230917371\', \'udinsedunia@gmail.com\', \'parung panjang dimana saja \', \'teman dari kecil gitu\', \'2022-12-27 19:42:15\', \'2022-12-27 19:42:15\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `contacs` (`id_group`, `name_contact`, `name_alias`, `phone`, `email`, `address`, `info_contact`, `created_at`, `updated_at`) VALUES (\'1\', \'udin \', \'udin sedunia\', \'1230917371\', \'udinsedunia@gmail.com\', \'parung panjang dimana saja \', \'teman dari kecil gitu\', \'2022-12-27 19:42:15\', \'2022-12-27 19:42:15\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `contacs` (`id_group`, `name_contact`, `name_alias`, `phone`, `email`, `address`, `info_contact`, `created_at`, `updated_at`) VALUES (\'1\', \'udin \', \'udin sedunia\', \'1230917371\', \'udinsedunia@gmail.com\', \'parung panjang dimana saja \', \'teman dari kecil gitu\', \'2022-12-27 19:42:15\', \'2022-12-27 19:42:15\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1916): CodeIgniter\Database\BaseConnection->query('INSERT INTO `contacs` (`id_group`, `name_contact`, `name_alias`, `phone`, `email`, `address`, `info_contact`, `created_at`, `updated_at`) VALUES (:id_group:, :name_contact:, :name_alias:, :phone:, :email:, :address:, :info_contact:, :created_at:, :updated_at:)', [...], false)
+ 5 SYSTEMPATH\Model.php(279): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(749): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(667): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Kontak.php(62): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\Kontak->create()
+10 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Kontak))
+11 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Commands\Server\rewrite.php(46): require_once('FCPATH\\index.php')
